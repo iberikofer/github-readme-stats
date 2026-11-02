@@ -134,7 +134,11 @@ const fetchTopLanguages = async (
         ...acc,
         [prev.node.name]: {
           name: prev.node.name,
-          color: prev.node.name === "C++" ? "#2ea44f" : prev.node.color,
+          color: 
+            prev.node.name === "C++" ? "#2ea44f" :
+            prev.node.name === "PowerShell" ? "#89e051" :
+            prev.node.name === "Shell" ? "#012456" :
+            prev.node.color,
           size: langSize,
           count: repoCount,
         },
